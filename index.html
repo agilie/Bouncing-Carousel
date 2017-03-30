@@ -15,25 +15,30 @@
     <div class="navigation arrow-left prev"><img src="img/arr-left.svg" width="40"></div>
     <div class="navigation arrow-right next"><img src="img/arr-right.svg" width="40"></div>
 
-    <div class="img-title">Fljashka</div>
-    <div class="img-description">Green color</div>
-    <div class="item-price">$ 70.00</div>
-    <div class="buy-btn">Buy</div>
-    <div class="item-link">Photo and preview</div>
-    <div class="content">
-        <div class="bounce-carousel-item">
-            <img src="img/flask_new.png" id="pic" width="230">
+    <div id="insert-here"></div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <div class="img-title">{{title}}</div>
+        <div class="img-description">{{property}}</div>
+        <div class="item-price">{{price}}</div>
+        <div class="buy-btn">Buy</div>
+        <div class="item-link">Photo and preview</div>
+        <div class="content">
+            <div class="bounce-carousel-item">
+                <img src="img/flask_new.png" class="pic" width="230">
+            </div>
+            <div class="bounce-carousel-item">
+                <img src="img/ice_cream.png" class="pic" width="230">
+            </div>
+            <div class="bounce-carousel-item">
+                <img src="img/press.png" class="pic" width="230">
+            </div>
+            <div class="bounce-carousel-item">
+                <img src="img/shell.png" class="pic" width="230">
+            </div>
         </div>
-        <div class="bounce-carousel-item">
-            <img src="img/ice_cream.png" id="pic" width="230">
-        </div>
-        <div class="bounce-carousel-item">
-            <img src="img/press.png" id="pic" width="230">
-        </div>
-        <div class="bounce-carousel-item">
-            <img src="img/shell.png" id="pic" width="230">
-        </div>
-    </div>
+    </script>
+
 
     <svg viewbox="0 630 1266 200" id="bounce">
         <path fill="#F3F5F7">
@@ -87,8 +92,16 @@
         </path>
     </svg>
 </div>
-<script src="carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
 <script>
+    var source   = document.getElementById("entry-template").innerHTML;
+    var template = Handlebars.compile(source);
+    var context = {title: 'Fljazhka', property: 'Green color', price: '$ 90'};
+    html = template(context);
+    document.getElementById('insert-here').innerHTML = html;
+
+    console.log(html);
+
     function eventFire(el, etype) {
         if (el.fireEvent) {
             el.fireEvent('on' + etype);
@@ -99,14 +112,17 @@
         }
     }
     var bounce = document.getElementById('bounce');
-    var pic = document.getElementById('pic');
+    var pics = document.querySelectorAll('.pic');
 
     function clicking() {
         eventFire(bounce, 'click');
     }
-    pic.addEventListener("mouseover", clicking, false);
-    pic.addEventListener("mouseleave", clicking, false);
+    pics.forEach(function (pic) {
+        pic.addEventListener("mouseover", clicking, false);
+        pic.addEventListener("mouseleave", clicking, false);
+    });
 
 </script>
+<script src="carousel.js"></script>
 </body>
 </html>
