@@ -1,4 +1,4 @@
-carousel = (function(){
+carousel = (function () {
 
     // Read necessary elements from the DOM once
     var box = document.querySelector('.bounce-carousel');
@@ -36,8 +36,7 @@ carousel = (function(){
         // if the next button was clicked and there
         // is no items element, set the counter
         // to 0
-        if (direction === 1 &&
-            !items[counter]) {
+        if (direction === 1 && !items[counter]) {
             counter = 0;
         }
 
@@ -48,10 +47,10 @@ carousel = (function(){
     }
 
     // add event handlers to buttons
-    next.addEventListener('click', function(ev) {
+    next.addEventListener('click', function (ev) {
         navigate(1);
     });
-    prev.addEventListener('click', function(ev) {
+    prev.addEventListener('click', function (ev) {
         navigate(-1);
     });
 

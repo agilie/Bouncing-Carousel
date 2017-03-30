@@ -1,11 +1,14 @@
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
-.bounce-carousel{
+.bounce-carousel {
     margin: auto;
     height: 700px;
     width: 100%;
     position: relative;
 }
+
 body {
     height: 100vh;
     background: #fcfcfc;
@@ -13,12 +16,14 @@ body {
     margin: 0;
     padding: 0;
 }
-.bounce-carousel{
+
+.bounce-carousel {
     max-width: 1124px;
     background-color: #E1E2E3;
     position: relative;
 }
-.navigation{
+
+.navigation {
     position: absolute;
     bottom: 55%;
     color: #000;
@@ -30,17 +35,21 @@ body {
     text-align: center;
     transition: all 0.8s ease-in;
 }
-.navigation:hover{
+
+.navigation:hover {
     background-color: #F3F5F7;
     cursor: pointer;
 }
-.arrow-right{
+
+.arrow-right {
     right: 7%;
 }
-.arrow-left{
+
+.arrow-left {
     left: 7%;
 }
-.img-title{
+
+.img-title {
     font-size: 46px;
     position: absolute;
     z-index: 1111;
@@ -49,7 +58,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-.img-description{
+
+.img-description {
     font-size: 24px;
     position: absolute;
     z-index: 1111;
@@ -58,7 +68,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-.item-price{
+
+.item-price {
     font-size: 30px;
     line-height: 30px;
     position: absolute;
@@ -68,7 +79,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-.buy-btn{
+
+.buy-btn {
     background-color: #618AE7;
     font-size: 18px;
     position: absolute;
@@ -82,11 +94,13 @@ body {
     border-radius: 20px;
     transition: all 0.3s ease-in;
 }
-.buy-btn:hover{
+
+.buy-btn:hover {
     opacity: 0.9;
     cursor: pointer;
 }
-.item-link{
+
+.item-link {
     background-color: #FF5151;
     font-size: 30px;
     position: absolute;
@@ -99,6 +113,7 @@ body {
     color: #fff;
     text-transform: uppercase;
 }
+
 svg#bounce {
     position: absolute;
     bottom: 0;
@@ -106,7 +121,8 @@ svg#bounce {
     height: 300px;
     z-index: 111;
 }
-.bounce-carousel-item{
+
+.bounce-carousel-item {
     width: auto;
     margin: 0 auto;
     text-align: center;
@@ -116,13 +132,15 @@ svg#bounce {
     left: 0;
     right: 0;
 }
-.bounce-carousel-item img{
+
+.bounce-carousel-item img {
     display: inline-block;
-    transition: all 1.5s ease-in-out,  z-index .5s 0s;
+    transition: all 1.5s ease-in-out, z-index .5s 0s;
     z-index: 11;
     position: relative;
 }
-.bounce-carousel-item img:hover{
+
+.bounce-carousel-item img:hover {
     cursor: pointer;
     transform: scale(1.05);
     z-index: 1111;
