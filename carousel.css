@@ -1,0 +1,25 @@
+.bounce-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.content .bounce-carousel-item {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: 1s;
+}
+
+.active {
+    height: 600px;
+}
+
+.active .bounce-carousel-item {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.active .bounce-carousel-item.current {
+    opacity: 1;
+    transform: scale(1);
+}

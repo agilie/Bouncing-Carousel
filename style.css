@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+
+.bounce-carousel{
+    margin: auto;
+    height: 700px;
+    width: 100%;
+    position: relative;
+}
+body {
+    height: 100vh;
+    background: #fcfcfc;
+    font-family: 'Economica', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.bounce-carousel{
+    max-width: 1124px;
+    background-color: #E1E2E3;
+    position: relative;
+}
+.navigation{
+    position: absolute;
+    bottom: 55%;
+    color: #000;
+    width: 54px;
+    height: 54px;
+    z-index: 111;
+    border-radius: 100%;
+    line-height: 86px;
+    text-align: center;
+    transition: all 0.8s ease-in;
+}
+.navigation:hover{
+    background-color: #F3F5F7;
+    cursor: pointer;
+}
+.arrow-right{
+    right: 7%;
+}
+.arrow-left{
+    left: 7%;
+}
+.img-title{
+    font-size: 46px;
+    position: absolute;
+    z-index: 1111;
+    bottom: 20%;
+    left: 7%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.img-description{
+    font-size: 24px;
+    position: absolute;
+    z-index: 1111;
+    bottom: 15%;
+    left: 7%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.item-price{
+    font-size: 30px;
+    line-height: 30px;
+    position: absolute;
+    z-index: 1111;
+    bottom: 22%;
+    right: 7%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.buy-btn{
+    background-color: #618AE7;
+    font-size: 18px;
+    position: absolute;
+    z-index: 1111;
+    bottom: 16%;
+    right: 7%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 34px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in;
+}
+.buy-btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+.item-link{
+    background-color: #FF5151;
+    font-size: 30px;
+    position: absolute;
+    bottom: 45%;
+    right: 11%;
+    transition: all 0.3s ease-in;
+    z-index: 111;
+    padding: 7px 40px;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: uppercase;
+}
+svg#bounce {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 111;
+}
+.bounce-carousel-item{
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    bottom: -110px;
+    left: 0;
+    right: 0;
+}
+.bounce-carousel-item img{
+    display: inline-block;
+    transition: all 1.5s ease-in-out,  z-index .5s 0s;
+    z-index: 11;
+    position: relative;
+}
+.bounce-carousel-item img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    z-index: 1111;
+}

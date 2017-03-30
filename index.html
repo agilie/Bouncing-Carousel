@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Carousel</title>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Economica:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+    <div class="bounce-carousel active">
+        <div class="navigation arrow-left prev"><img src="img/arr-left.svg" width="40"></div>
+        <div class="navigation arrow-right next"><img src="img/arr-right.svg" width="40"></div>
+
+        <div class="img-title">Fljashka</div>
+        <div class="img-description">Green color</div>
+        <div class="item-price">$ 70.00</div>
+        <div class="buy-btn">Buy</div>
+        <div class="item-link">Photo and preview</div>
+        <div class="content">
+            <div class="bounce-carousel-item">
+                <img src="img/flask_new.png" id="pic" width="230">
+            </div>
+            <div class="bounce-carousel-item">
+                <img src="img/ice_cream.png" id="pic" width="230">
+            </div>
+            <div class="bounce-carousel-item">
+                <img src="img/press.png" id="pic" width="230">
+            </div>
+            <div class="bounce-carousel-item">
+                <img src="img/shell.png" id="pic" width="230">
+            </div>
+        </div>
+
+        <svg viewbox="0 630 1266 200" id="bounce">
+            <path fill="#F3F5F7">
+                <animate
+                        attributeName="d"
+                        dur="0"
+                        repeatCount="0"
+                        values="M0,630
+                     C0,630 279,629 633,630
+                     C987,631 1266,630 1266,630
+                     L1266,935 L0,935 L0,630
+                     Z;"/>
+                <animate
+                        id="start"
+                        begin="bounce.click"
+                        attributeName="d"
+                        dur="1.5s"
+                        repeatCount="0"
+                        values="M0,630
+                     C0,630 279,629 633,630
+                     C987,631 1266,630 1266,630
+                     L1266,935 L0,935 L0,630
+                     Z;
+
+                     M0,630 C0,630 279,660 633,661 C987,662 1266,630 1266,630 L1266,935 L0,935 L0,630
+                     Z;
+
+                     M0,630 C0,630 279,592 633,593 C987,594 1266,630 1266,630 L1266,935 L0,935 L0,630 Z;
+
+                     M0,630 C0,630 279,652 633,653 C987,654 1266,630 1266,630 L1266,935 L0,935 L0,630 Z;
+
+                     M0,630 C0,630 279,610 633,611 C987,612 1266,630 1266,630 L1266,935 L0,935 L0,630 Z;
+
+                     M0,630 C0,630 279,639 633,640 C987,641 1266,630 1266,630 L1266,935 L0,935 L0,630 Z;
+
+                     M0,630 C0,630 279,615 633,616 C987,617 1266,630 1266,630 L1266,935 L0,935 L0,630 Z;
+
+                     M0,630
+                     C0,630 279,629 633,630
+                     C987,631 1266,630 1266,630
+                     L1266,935 L0,935 L0,630
+                     Z;
+
+                     M0,630
+                     C0,630 279,629 633,630
+                     C987,631 1266,630 1266,630
+                     L1266,935 L0,935 L0,630
+                     Z;"/>
+
+
+
+            </path>
+        </svg>
+    </div>
+    <script src="carousel.js"></script>
+    <script>
+        function eventFire(el, etype){
+            if (el.fireEvent) {
+                el.fireEvent('on' + etype);
+            } else {
+                var evObj = document.createEvent('Events');
+                evObj.initEvent(etype, true, false);
+                el.dispatchEvent(evObj);
+            }
+        }
+        var bounce = document.getElementById('bounce');
+        var pic = document.getElementById('pic');
+
+        function clicking() {
+            eventFire(bounce, 'click');
+        }
+        pic.addEventListener("mouseover", clicking, false);
+        pic.addEventListener("mouseleave", clicking, false);
+
+    </script>
+</body>
+</html>
