@@ -123,7 +123,6 @@ svg#bounce {
 }
 
 .bounce-carousel-item {
-    width: auto;
     margin: 0 auto;
     text-align: center;
     height: 100%;
@@ -137,7 +136,6 @@ svg#bounce {
     display: inline-block;
     transition: all 1.5s ease-in-out, z-index .5s 0s;
     z-index: 11;
-    position: relative;
 }
 
 .bounce-carousel-item img:hover {
