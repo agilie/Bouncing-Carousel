@@ -14,7 +14,7 @@
 }
 
 .bounce-carousel-item {
-    position: relative;
+    position: absolute;
     opacity: 0;
     transform: scale(0);
 }
