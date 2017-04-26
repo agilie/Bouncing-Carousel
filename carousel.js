@@ -9,6 +9,11 @@ carousel = (function () {
     // current item
     var counter = 0;
     var items = box.querySelectorAll('.content .bounce-carousel-item');
+    var items_content = [
+        {title: 'Fljazhka', property: 'Green color', price: '$ 90'},
+        {title: 'Knife', property: 'Wood', price: '$ 10'},
+        {title: 'Watch', property: 'Steel', price: '$ 990'}
+    ];
     var amount = items.length;
     var current = items[0];
 
@@ -20,6 +25,13 @@ carousel = (function () {
 
         // hide the old current list item
         current.classList.remove('current');
+        if (direction > 0) {
+            current.classList.remove('right');
+            current.classList.add('left');
+        } else {
+            current.classList.remove('left');
+            current.classList.add('right');
+        }
 
         // calculate th new position
         counter = counter + direction;
@@ -43,7 +55,24 @@ carousel = (function () {
         // set new current element
         // and add CSS class
         current = items[counter];
-        current.classList.add('current');
+        if (direction > 0) {
+            current.classList.remove('left');
+            current.classList.add('right');
+        } else {
+            current.classList.remove('right');
+            current.classList.add('left');
+        }
+        if (direction) {
+            setTimeout(function() {
+                current.classList.add('current');
+            }, 700);
+        } else {
+            current.classList.add('current');
+        }
+
+        document.querySelector('.img-title').innerHTML = items_content[counter].title;
+        document.querySelector('.img-description').innerHTML = items_content[counter].property;
+        document.querySelector('.item-price').innerHTML = items_content[counter].price;
     }
 
     // add event handlers to buttons

@@ -7,7 +7,7 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    transition: 1s;
+    transition: 0.7s;
 }
 
 .active {
@@ -22,4 +22,13 @@
 .active .bounce-carousel-item.current {
     opacity: 1;
     transform: scale(1);
+    left: 0;
+}
+
+.left {
+    left: 50%;
+}
+
+.right {
+    left: -50%;
 }
