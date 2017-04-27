@@ -16,6 +16,8 @@ carousel = (function () {
     ];
     var amount = items.length;
     var current = items[0];
+    items[1].classList.add('right');
+    items[amount - 1].classList.add('left');
 
     box.classList.add('active');
 
@@ -32,6 +34,18 @@ carousel = (function () {
             current.classList.remove('left');
             current.classList.add('right');
         }
+
+        items.forEach(function (item) {
+            if (item != current && direction) {
+                if (direction >= 0) {
+                    item.classList.remove('left');
+                    item.classList.add('right');
+                } else {
+                    item.classList.remove('right');
+                    item.classList.add('left');
+                }
+            }
+        });
 
         // calculate th new position
         counter = counter + direction;
@@ -55,20 +69,7 @@ carousel = (function () {
         // set new current element
         // and add CSS class
         current = items[counter];
-        if (direction > 0) {
-            current.classList.remove('left');
-            current.classList.add('right');
-        } else {
-            current.classList.remove('right');
-            current.classList.add('left');
-        }
-        if (direction) {
-            setTimeout(function() {
-                current.classList.add('current');
-            }, 700);
-        } else {
-            current.classList.add('current');
-        }
+        current.classList.add('current');
 
         document.querySelector('.img-title').innerHTML = items_content[counter].title;
         document.querySelector('.img-description').innerHTML = items_content[counter].property;
