@@ -143,3 +143,123 @@ svg#bounce {
     transform: scale(1.05);
     z-index: 1111;
 }
+.visible-on-small{
+    display: none;
+}
+
+
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+    body{
+        background: red;
+    }
+    svg#bounce{
+        display: none;
+    }
+    .active{
+        height: 400px !important;
+    }
+    .bounce-carousel-item{
+        bottom: 0;
+        padding-top: 30px;
+    }
+    .bounce-carousel-item img{
+        height: 100%;
+        width: auto;
+        max-height: 250px;
+    }
+    .hidden-on-small{
+        display: none;
+    }
+    .visible-on-small{
+        display: block;
+    }
+    .img-title{
+        bottom: 50px;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 36px;
+    }
+    .item-link{
+        bottom: 47%;
+        right: auto;
+        left: 15%;
+        font-size: 22px;
+    }
+    .buy-btn{
+        bottom: 47%;
+        right: 15%;
+        left: auto;
+        font-size: 28px;
+    }
+    .navigation{
+        bottom: 47%;
+        background-color: #F3F5F7;
+    }
+    .arrow-right{
+        right: 3%;
+    }
+    .arrow-left{
+        left: 3%;
+    }
+}
+
+@media only screen and (max-device-width: 767px) and (orientation: portrait) {
+    body{
+        background: red;
+    }
+    svg#bounce{
+        display: none;
+    }
+    .active{
+        height: 600px !important;
+    }
+    .bounce-carousel-item{
+        bottom: 0;
+        padding-top: 30px;
+    }
+    .bounce-carousel-item img{
+        height: 100%;
+        width: auto;
+        max-height: 450px;
+    }
+    .hidden-on-small{
+        display: none;
+    }
+    .visible-on-small{
+        display: block;
+    }
+    .img-title{
+        bottom: 50px;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 38px;
+    }
+    .item-link{
+        bottom: 47%;
+        right: auto;
+        left: 13%;
+        font-size: 32px;
+    }
+    .buy-btn{
+        bottom: 47%;
+        right: 15%;
+        left: auto;
+        font-size: 38px;
+    }
+    .navigation{
+        bottom: 47%;
+        background-color: #F3F5F7;
+        width: 75px;
+        height: 75px;
+        line-height: 100px;
+    }
+    .arrow-right{
+        right: 2%;
+    }
+    .arrow-left{
+        left: 2%;
+    }
+}
+
