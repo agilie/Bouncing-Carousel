@@ -7,15 +7,17 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link href="https://fonts.googleapis.com/css?family=Economica:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carousel.css">
 </head>
 <body>
 <div class="bounce-carousel active">
-    <div class="navigation arrow-left prev"><img src="img/arr-left.svg" width="40"></div>
-    <div class="navigation arrow-right next"><img src="img/arr-right.svg" width="40"></div>
+    <!-- navigation elements -->
+    <div class="navigation arrow-left prev"><img src="img/arr-left.svg" alt="Left navigation arrow" width="40"></div>
+    <div class="navigation arrow-right next"><img src="img/arr-right.svg" alt="Right navigation arrow" width="40"></div>
 
-    <div>
+
+    <!-- item description with hiding elements on Mobile devices  -->
+    <div class="item-properties">
         <div class="img-title hidden-on-small">title</div>
         <div class="img-title visible-on-small">title_price</div>
         <div class="img-description hidden-on-small">property</div>
@@ -23,19 +25,22 @@
         <div class="buy-btn">Buy</div>
         <div class="item-link hidden-on-small">Photo and preview</div>
         <div class="item-link visible-on-small">Preview</div>
+
+        <!-- carousel images -->
         <div class="content">
             <div class="bounce-carousel-item">
-                <img src="img/flask_new.png" class="pic" width="230">
+                <img src="img/flask_new.png" alt="Fljazhka" class="pic" width="230">
             </div>
             <div class="bounce-carousel-item">
-                <img src="img/knife.png" class="pic" width="230">
+                <img src="img/knife.png" alt="Knife" class="pic" width="230">
             </div>
             <div class="bounce-carousel-item">
-                <img src="img/watch.png" class="pic" width="230">
+                <img src="img/watch.png" alt="Watch" class="pic" width="230">
             </div>
         </div>
     </div>
 
+    <!-- animated svg -->
     <svg viewbox="0 630 1266 200" id="bounce">
         <path fill="#F3F5F7">
             <animate

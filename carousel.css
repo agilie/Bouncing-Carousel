@@ -1,31 +1,113 @@
-.bounce-carousel {
-    position: relative;
-    overflow: hidden;
+/* General styling */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: #fcfcfc;
+    font-family: 'Economica', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.visible-on-small{
+    display: none;
 }
 
+/* Navigation */
+.navigation {
+    position: absolute;
+    bottom: 55%;
+    color: #000;
+    width: 54px;
+    height: 54px;
+    z-index: 111;
+    border-radius: 100%;
+    line-height: 86px;
+    text-align: center;
+    transition: all 0.8s ease-in;
+}
+
+.navigation:hover {
+    background-color: #F3F5F7;
+    cursor: pointer;
+}
+
+.arrow-right {
+    right: 7%;
+}
+
+.arrow-left {
+    left: 7%;
+}
+.buy-btn {
+    background-color: #618AE7;
+    font-size: 18px;
+    position: absolute;
+    z-index: 1111;
+    bottom: 16%;
+    right: 7%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 34px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in;
+}
+
+.buy-btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.item-link {
+    background-color: #FF5151;
+    font-size: 30px;
+    position: absolute;
+    bottom: 45%;
+    right: 11%;
+    transition: all 0.3s ease-in;
+    z-index: 111;
+    padding: 7px 40px;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+/* Carousel styling */
+.bounce-carousel {
+    margin: auto;
+    height: 700px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    max-width: 1124px;
+    background-color: #E1E2E3;
+}
+.active {
+    height: 600px;
+}
 .content .bounce-carousel-item {
     text-align: center;
     transition: 0.7s;
     width: 50%;
-}
-
-.active {
-    height: 600px;
-}
-
-.bounce-carousel-item {
+    margin: 0 auto;
+    height: 100%;
     position: absolute;
+    bottom: -110px;
+    left: 0;
+    right: 0;
     opacity: 0;
     transform: scale(0);
 }
-
 .active .bounce-carousel-item.current {
     opacity: 1;
     transform: scale(1);
     left: 0;
 }
 .bounce-carousel-item:hover{
-    z-index: 999999999999;
+    z-index: 99999;
 }
 
 .left {
@@ -35,3 +117,172 @@
 .right {
     left: 50%;
 }
+.img-title {
+    font-size: 46px;
+    position: absolute;
+    z-index: 1111;
+    bottom: 20%;
+    left: 7%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.img-description {
+    font-size: 24px;
+    position: absolute;
+    z-index: 1111;
+    bottom: 15%;
+    left: 7%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.item-price {
+    font-size: 30px;
+    line-height: 30px;
+    position: absolute;
+    z-index: 1111;
+    bottom: 22%;
+    right: 7%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.bounce-carousel-item img {
+    display: inline-block;
+    transition: all 1.5s ease-in-out, z-index .5s 0s;
+    z-index: 11;
+}
+
+.bounce-carousel-item img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    z-index: 1111;
+}
+
+
+/* Animated SVG */
+svg#bounce {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 111;
+}
+
+
+
+/* Media queries for Small Devices in landscape orientation */
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+    body{
+        background: red;
+    }
+    svg#bounce{
+        display: none;
+    }
+    .active{
+        height: 400px !important;
+    }
+    .bounce-carousel-item{
+        bottom: 0;
+        padding-top: 30px;
+    }
+    .bounce-carousel-item img{
+        height: 100%;
+        width: auto;
+        max-height: 250px;
+    }
+    .hidden-on-small{
+        display: none;
+    }
+    .visible-on-small{
+        display: block;
+    }
+    .img-title{
+        bottom: 50px;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 36px;
+    }
+    .item-link{
+        bottom: 47%;
+        right: auto;
+        left: 15%;
+        font-size: 22px;
+    }
+    .buy-btn{
+        bottom: 47%;
+        right: 15%;
+        left: auto;
+        font-size: 28px;
+    }
+    .navigation{
+        bottom: 47%;
+        background-color: #F3F5F7;
+    }
+    .arrow-right{
+        right: 3%;
+    }
+    .arrow-left{
+        left: 3%;
+    }
+}
+
+/* Media queries for Small Devices in portrait orientation */
+@media only screen and (max-device-width: 767px) and (orientation: portrait) {
+    body{
+        background: red;
+    }
+    svg#bounce{
+        display: none;
+    }
+    .active{
+        height: 600px !important;
+    }
+    .bounce-carousel-item{
+        bottom: 0;
+        padding-top: 30px;
+    }
+    .bounce-carousel-item img{
+        height: 100%;
+        width: auto;
+        max-height: 450px;
+    }
+    .hidden-on-small{
+        display: none;
+    }
+    .visible-on-small{
+        display: block;
+    }
+    .img-title{
+        bottom: 50px;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 38px;
+    }
+    .item-link{
+        bottom: 47%;
+        right: auto;
+        left: 13%;
+        font-size: 32px;
+    }
+    .buy-btn{
+        bottom: 47%;
+        right: 15%;
+        left: auto;
+        font-size: 38px;
+    }
+    .navigation{
+        bottom: 47%;
+        background-color: #F3F5F7;
+        width: 75px;
+        height: 75px;
+        line-height: 100px;
+    }
+    .arrow-right{
+        right: 2%;
+    }
+    .arrow-left{
+        left: 2%;
+    }
+}
+
