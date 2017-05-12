@@ -228,16 +228,13 @@ svg#bounce {
 
 /* Media queries for Small Devices in portrait orientation */
 @media only screen and (max-device-width: 767px) and (orientation: portrait) {
-    body{
-        background: red;
-    }
     svg#bounce{
         display: none;
     }
     .active{
         height: 600px !important;
     }
-    .bounce-carousel-item{
+    .content .bounce-carousel-item{
         bottom: 0;
         padding-top: 30px;
     }
