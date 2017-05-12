@@ -10,9 +10,9 @@ carousel = (function () {
     var counter = 0;
     var items = box.querySelectorAll('.content .bounce-carousel-item');
     var items_content = [
-        {title: 'Fljazhka', property: 'Green color', price: '$90', title_price: 'Fljazhka - $90'},
-        {title: 'Knife', property: 'Wood', price: '$10', title_price: 'Knife - $10'},
-        {title: 'Watch', property: 'Steel', price: '$990', title_price: 'Fljazhka - $90'}
+        {title: 'Fljazhka', property: 'Green color', price: '$90'},
+        {title: 'Knife', property: 'Wood', price: '$10'},
+        {title: 'Watch', property: 'Steel', price: '$990'}
     ];
     var amount = items.length;
     var current = items[0];
@@ -72,7 +72,7 @@ carousel = (function () {
         current.classList.add('current');
 
         document.querySelector('.hidden-on-small').innerHTML = items_content[counter].title;
-        document.querySelector('.visible-on-small').innerHTML = items_content[counter].title_price;
+        document.querySelector('.visible-on-small').textContent = items_content[counter].title + ' - ' + items_content[counter].price;
         document.querySelector('.img-description').innerHTML = items_content[counter].property;
         document.querySelector('.item-price').innerHTML = items_content[counter].price;
     }
