@@ -91,4 +91,24 @@ carousel = (function () {
 
 })();
 
+function eventFire(el, etype) {
+    if (el.fireEvent) {
+        el.fireEvent('on' + etype);
+    } else {
+        var evObj = document.createEvent('Events');
+        evObj.initEvent(etype, true, false);
+        el.dispatchEvent(evObj);
+    }
+}
+var bounce = document.getElementById('bounce');
+var pics = document.querySelectorAll('.pic');
+
+function clicking() {
+    eventFire(bounce, 'click');
+}
+pics.forEach(function (pic) {
+    pic.addEventListener("mouseover", clicking, false);
+    pic.addEventListener("mouseleave", clicking, false);
+});
+
 
