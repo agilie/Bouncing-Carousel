@@ -110,7 +110,7 @@ body {
     z-index: 99999;
 }
 .bounce-carousel-item.left {
-    left: -50% ;
+    left: 0;
 }
 
 .bounce-carousel-item.right {
