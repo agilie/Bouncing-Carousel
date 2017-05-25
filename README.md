@@ -1,5 +1,7 @@
 # Bouncing carousel
 
+## Introduction
+
 The bouncing carousel is an experiment with SVG animations technology.
 Inspired by [Carousel](https://dribbble.com/shots/2637299-Carousel).
 
@@ -19,3 +21,7 @@ For the gallery images `png`, `gif` formats are preferred thus formats supportin
 transparency - this will allow the objects in it to look as effective as possible.
 
 Carousel is ideal for the e-commerce focused websites.
+
+## See, how it works
+
+https://agilie.github.io/Bouncing-Carousel/
