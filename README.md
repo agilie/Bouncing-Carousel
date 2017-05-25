@@ -19,3 +19,5 @@ For the gallery images `png`, `gif` formats are preferred thus formats supportin
 transparency - this will allow the objects in it to look as effective as possible.
 
 Carousel is ideal for the e-commerce focused websites.
+
+<iframe width="420" height="315" src="//www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen></iframe>
