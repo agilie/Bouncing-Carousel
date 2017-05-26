@@ -24,7 +24,7 @@ transparency - this will allow the objects in it to look as effective as possibl
 
 Carousel is ideal for the e-commerce focused websites.
 
-## See, how it works
+## See, how it works (demo)
 
 https://agilie.github.io/Bouncing-Carousel/
 
