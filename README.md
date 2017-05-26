@@ -36,7 +36,8 @@ to find the solution or create an new issue that we will fix asap. Feel free to 
 This Rails application template is open-sourced by [Agilie Team](https://www.agilie.com) <info@agilie.com>
 
 ## Contributors
-[Tatiana Kushnir](https://github.com/tatiana-kushnir-89) - <tatiana.kushnir@agilie.com>,
+[Tatiana Kushnir](https://github.com/tatiana-kushnir-89) - <tatiana.kushnir@agilie.com>
+
 [Sergey Melashych](https://github.com/SergeyMell) - <sergey.mell@agilie.com>
 
 ## License
