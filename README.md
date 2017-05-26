@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/agilie/Bouncing-Carousel)
+
 # Bouncing carousel
 
 ## Introduction
@@ -25,3 +27,17 @@ Carousel is ideal for the e-commerce focused websites.
 ## See, how it works
 
 https://agilie.github.io/Bouncing-Carousel/
+
+## Troubleshooting
+Problems? Check the [Issues](https://github.com/agilie/Bouncing-Carousel/issues) block 
+to find the solution or create an new issue that we will fix asap. Feel free to contribute.
+
+## Author
+This Rails application template is open-sourced by [Agilie Team](https://www.agilie.com) <info@agilie.com>
+
+## Contributors
+[Tatiana Kushnir](https://github.com/tatiana-kushnir-89) - <sergey.mell@agilie.com>,
+[Sergey Melashych](https://github.com/SergeyMell) - <sergey.mell@agilie.com>
+
+## License
+The [MIT](LICENSE.MD) License (MIT) Copyright © 2017 [Agilie Team](https://www.agilie.com)
