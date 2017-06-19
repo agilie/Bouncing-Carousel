@@ -1,3 +1,5 @@
+Check this project on [Dribbble](https://dribbble.com/shots/2637299-Carousel).
+
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/agilie/Bouncing-Carousel)
 
 # Bouncing carousel
