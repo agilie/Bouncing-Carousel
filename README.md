@@ -36,9 +36,14 @@ to find the solution or create an new issue that we will fix asap. Feel free to 
 This mini-project is open-sourced by [Agilie Team](https://www.agilie.com) <info@agilie.com>
 
 ## Contributors
-[Tatiana Kushnir](https://github.com/tatiana-kushnir-89) - <tatiana.kushnir@agilie.com>
+[Tatiana Kushnir](https://github.com/tatiana-kushnir-89)
 
-[Sergey Melashych](https://github.com/SergeyMell) - <sergey.mell@agilie.com>
+[Sergey Melashych](https://github.com/SergeyMell)
+
+## Contact us
+If you have any questions, suggestions or just need a help with web or mobile development, please email us at <web@agilie.com>. You can ask us anything from basic to complex questions.
+
+We will continue publishing new open-source projects. Stay with us, more updates will follow!
 
 ## License
 The [MIT](LICENSE.MD) License (MIT) Copyright © 2017 [Agilie Team](https://www.agilie.com)
